@@ -4,11 +4,12 @@ salir = "no"
 
 while salir != "si":
 
-    print("\n--- INFORMACION ACADEMICA ---")
+    print("\n--- ANALISIS DE RESULTADOS ---")
     print("1 Registrar estudiante")
     print("2 Registrar materia y nota")
-    print("3 Mostrar informacion de estudiantes")
-    print("4 Salir")
+    print("3 Calcular promedios")
+    print("4 Mejor estudiante")
+    print("5 Salir")
 
     opcion = input("Seleccione una opcion: ")
 
@@ -35,24 +36,57 @@ while salir != "si":
 
     elif opcion == "3":
 
-        if len(estudiantes) == 0:
-            print("No hay estudiantes")
+        for est in estudiantes:
 
-        else:
+            suma = 0
+            contador = 0
 
-            for est in estudiantes:
+            for mat in estudiantes[est]:
 
-                print("\nEstudiante:", est)
+                suma = suma + estudiantes[est][mat]
+                contador = contador + 1
 
-                if len(estudiantes[est]) == 0:
-                    print("No tiene materias")
+            if contador > 0:
 
-                else:
+                promedio = suma / contador
+                print(est, "Promedio:", promedio)
 
-                    for mat in estudiantes[est]:
-                        print(mat, "-", estudiantes[est][mat])
+            else:
+
+                print(est, "No tiene notas")
 
     elif opcion == "4":
+
+        mejor = ""
+        mejor_promedio = 0
+
+        for est in estudiantes:
+
+            suma = 0
+            contador = 0
+
+            for mat in estudiantes[est]:
+
+                suma = suma + estudiantes[est][mat]
+                contador = contador + 1
+
+            if contador > 0:
+
+                promedio = suma / contador
+
+                if promedio > mejor_promedio:
+
+                    mejor_promedio = promedio
+                    mejor = est
+
+        if mejor != "":
+            print("Mejor estudiante:", mejor)
+            print("Promedio:", mejor_promedio)
+
+        else:
+            print("No hay datos")
+
+    elif opcion == "5":
 
         salir = "si"
 
