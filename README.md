@@ -18,21 +18,6 @@ Este proyecto implementa un sistema de gestión académica en Python que permite
 - Python 3.8 o superior.  
 - No requiere librerías externas, únicamente la instalación estándar de Python.
 
-## Uso
-
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/usuario/proyecto.git
-   ```
-2. Acceder al directorio del proyecto:
-   ```bash
-   cd proyecto
-   ```
-3. Ejecutar el programa:
-   ```bash
-   python fusion.py
-   ```
-
 ## Ejemplo de ejecución
 
 ```
@@ -54,11 +39,3 @@ PROYECTO/
 ├── fusion.py      # Código principal del sistema
 ├── README.md      # Documentación del proyecto
 ```
-
-## Futuras mejoras
-
-- Persistencia de datos en archivos o bases de datos.  
-- Interfaz gráfica para mayor facilidad de uso.  
-- Reportes detallados de rendimiento académico.  
-
----
