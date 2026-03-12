@@ -1,5 +1,3 @@
-Aquí tienes un ejemplo de **README.md** profesional para tu programa de registro académico:
-
 ---
 
 # Sistema de Registro Académico
